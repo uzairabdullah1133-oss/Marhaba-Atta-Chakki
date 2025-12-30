@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marhaba Atta Chakki - Grocery Management System</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- App Container -->
+    <div id="app">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-wheat-awn"></i> Marhaba Atta Chakki
+            </div>
+            <div class="nav-links">
+                <button onclick="navigateTo('home')" class="nav-btn active"><i class="fa-solid fa-home"></i>
+                    Home</button>
+                <button onclick="navigateTo('customer')" class="nav-btn"><i class="fa-solid fa-cart-shopping"></i>
+                    Shop</button>
+                <button onclick="showComplaintModal()" class="nav-btn"><i class="fa-solid fa-comment-dots"></i>
+                    Complaint</button>
+                <button onclick="navigateTo('manager')" class="nav-btn"><i class="fa-solid fa-chart-line"></i>
+                    Manager</button>
+                <button onclick="navigateTo('owner')" class="nav-btn"><i class="fa-solid fa-user-tie"></i>
+                    Owner</button>
+                <button onclick="showDeveloperModal()" class="nav-btn"
+                    style="padding: 2px; background: transparent; border: 2px solid var(--primary-color); border-radius: 50%; width: 42px; height: 42px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <img src="developer.png" alt="Dev" style="width: 100%; height: 100%; object-fit: cover;">
+                </button>
+
+
+                <!-- Owner Profile Only -->
+                <div class="user-menu" style="border:none; margin-left: 1rem; padding-left: 0.5rem;">
+                    <div class="profile-trigger" onclick="handleProfileSettings()" title="Owner Settings">
+                        <img id="nav-profile-img" src="https://placehold.co/100x100" class="nav-profile-img"
+                            alt="Profile" style="border-width: 2px;">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Dynamic content will be loaded here -->
+        </main>
+
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-container"></div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>
